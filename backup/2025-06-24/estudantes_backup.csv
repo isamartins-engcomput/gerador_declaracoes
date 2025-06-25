@@ -1,0 +1,5 @@
+NOME_ESTUDANTE,CPF,EMAIL,RESUMO_ATIVIDADE,DATA_INICIAL,DATA_FINAL,CARGA_HORARIA,DATA_EMISSAO,NOME_RESPONSAVEL,STATUS
+João,12345678910,joaomaria@gmail.com,Aulas de reforço para os calouros,20/03/2025,20/05/2025,50 horas,20/06/2025,Alex Araujo,GERADA
+Maria,12345678910,mariajoao@gmail.com,Aulas de reforço para os calouros,20/03/2025,20/05/2025,50 horas,20/06/2025,Alex Araujo,GERADA
+Francisco,12345678910,franciscoclaudia@gmail.com,Aulas de reforço para os calouros,20/03/2025,20/05/2025,50 horas,20/06/2025,Alex Araujo,GERADA
+Cláudia,12345678910,claudiafrancisco@gmail.com,Aulas de reforço para os calouros,20/03/2025,20/05/2025,50 horas,20/06/2025,Alex Araujo,GERADA
