@@ -1,7 +1,10 @@
+# Ambiente virtual
 venv/
 __pycache__/
 *.pyc
 
+# Arquivos temporários
+*.docx
+*.pdf
+declaracoes_geradas/
 backup/
-
-dados/
