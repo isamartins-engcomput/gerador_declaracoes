@@ -1,6 +1,8 @@
 # 📄 Gerador de Declarações em PDF
 
-Este é um projeto em Python desenvolvido para automatizar a geração de declarações complementares a partir de um modelo `.docx` e uma lista de estudantes em arquivo `.csv`. As declarações são geradas em PDF, com backup automático dos dados e controle de status para evitar duplicações.
+Este projeto foi desenvolvido em Python pela estudante de Engenharia de Computação Isadora Martins, com o objetivo de automatizar o processo de geração de declarações de atividades para estudantes. A partir de um modelo de documento `.docx` e de uma lista de estudantes em um arquivo `.csv`, o sistema gera automaticamente declarações personalizadas em PDF, realiza backup dos arquivos gerados e mantém o controle de status para garantir que cada declaração seja emitida apenas uma vez.
+
+Ideal para instituições acadêmicas, monitorias, coordenações de curso ou quaisquer situações em que é necessário gerar e organizar declarações de forma prática, rápida e confiável.
 
 ---
 
@@ -85,12 +87,12 @@ gerador_declaracoes/
 O cabeçalho do CSV deve conter:
 
 ```csv
-NOME_ESTUDANTE,CPF,EMAIL,RESUMO_ATIVIDADE,DATA_INICIAL,DATA_FINAL,CARGA_HORARIA,DATA_EMISSAO,NOME_RESPONSAVEL,STATUS
+TITULO_ATIVIDADE,NOME_ESTUDANTE,CPF,RESUMO_ATIVIDADE,DATA_INICIAL,DATA_FINAL,CARGA_HORARIA,DATA_EMISSAO,NOME_RESPONSAVEL,STATUS
 ```
 
-Exemplo:
+EXEMPLO:
 ```csv
-João da Silva,12345678900,joao@email.com,"Participação em palestra",2024-06-01,2024-06-02,4,2024-06-05,Prof. Maria,PENDENTE
+Declaração de Horas Complementares,João da Silva,12345678900,Participação em palestra,06/01/2024,06/02/2024,4 horas,06/05/2024, Maria Madalena,PENDENTE
 ```
 
 ⚠️ Apenas estudantes com `STATUS = PENDENTE` (em qualquer capitalização) terão declarações geradas. O campo `STATUS` será atualizado automaticamente para `GERADA` após a emissão.
@@ -102,8 +104,10 @@ João da Silva,12345678900,joao@email.com,"Participação em palestra",2024-06-0
 Com o repositório clonado, o ambiente virtual ativado e o arquivo CSV contendo os dados dos estudantes completo, execute o programa:
 
 ```
-python main.py
+python3 main.py
 ```
+
+As declarações serão geradas na pasta `declaracoes_geradas/`, e um backup será salvo em `backup/` com os arquivos `.pdf` e o CSV atualizado.
 
 ---
 

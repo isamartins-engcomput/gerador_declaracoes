@@ -6,5 +6,4 @@ __pycache__/
 # Arquivos temporários
 *.docx
 *.pdf
-declaracoes_geradas/
-backup/
+*.csv

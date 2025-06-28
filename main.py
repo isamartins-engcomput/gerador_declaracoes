@@ -31,9 +31,9 @@ def main():
             print(f"\nGerando declaração do estudante {i + 1}...")
 
             preencher_declaracoes_docx (
+                estudante["TITULO_ATIVIDADE"],
                 estudante["NOME_ESTUDANTE"],
                 estudante["CPF"],
-                estudante["EMAIL"],
                 estudante["RESUMO_ATIVIDADE"],
                 estudante["DATA_INICIAL"],
                 estudante["DATA_FINAL"],
