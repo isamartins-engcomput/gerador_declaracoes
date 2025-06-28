@@ -19,9 +19,9 @@ Este é um projeto em Python desenvolvido para automatizar a geração de declar
 - Python 3.12
 - LibreOffice (Linux) **ou** Pandoc + LaTeX (Windows/Linux)
 
-### Linux - LibreOffice:
+### Linux:
 
-```bash
+```
 sudo apt install python3.12-venv libreoffice
 ```
 
@@ -86,6 +86,10 @@ O cabeçalho do CSV deve conter:
 
 ```csv
 NOME_ESTUDANTE,CPF,EMAIL,RESUMO_ATIVIDADE,DATA_INICIAL,DATA_FINAL,CARGA_HORARIA,DATA_EMISSAO,NOME_RESPONSAVEL,STATUS
+```
+
+Exemplo:
+```csv
 João da Silva,12345678900,joao@email.com,"Participação em palestra",2024-06-01,2024-06-02,4,2024-06-05,Prof. Maria,PENDENTE
 ```
 
@@ -97,7 +101,7 @@ João da Silva,12345678900,joao@email.com,"Participação em palestra",2024-06-0
 
 Com o repositório clonado, o ambiente virtual ativado e o arquivo CSV contendo os dados dos estudantes completo, execute o programa:
 
-```bash
+```
 python main.py
 ```
 
