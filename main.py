@@ -4,6 +4,7 @@ from utils.preencher_declaracoes_docx import preencher_declaracoes_docx
 from utils.converter_docx_para_pdf import converter_docx_para_pdf
 from utils.backup_completo import backup_completo
 from utils.atualizar_status_csv import atualizar_status_csv
+from utils.juntar_pdfs import juntar_pdfs
 
 try:
     largura_terminal = os.get_terminal_size().columns
@@ -24,6 +25,9 @@ def main():
     if not estudantes:
         print("\nNenhum estudante encontrado.\n")
         return
+    
+    opcao = input("\nDeseja gerar todas as declarações em um único PDF? (s/n): ").strip().lower()
+    gerar_unico_pdf = opcao == "s"
 
     for i, estudante in enumerate(estudantes):
        
@@ -48,10 +52,20 @@ def main():
             print(f"Pulando estudante {i + 1} - Declaração com status 'GERADA'.")
     
     if houve_geracao:
+
         converter_docx_para_pdf()
+
+        if gerar_unico_pdf:
+            juntar_pdfs()
+        else:
+            print("Arquivos PDF individuais gerados na pasta declaracoes_geradas/")
+
         backup_completo()
+        
     else:
         print("\nNenhuma declaração com status 'PENDENTE' foi encontrada.")
+
+    print("\nProcesso concluído!")
 
 if __name__ == "__main__":
     main()
